@@ -45,7 +45,7 @@ EMAIL_FROM = os.environ.get("EMAIL_FROM", os.environ.get("EMAIL_USER") or "no-re
 # --- Twilio config ---
 TWILIO_ACCOUNT_SID = os.environ.get("TWILIO_ACCOUNT_SID")
 TWILIO_AUTH_TOKEN = os.environ.get("TWILIO_AUTH_TOKEN")
-TWILIO_WHATSAPP_NUMBER = os.environ.get("TWILIO_WHATSAPP_NUMBER", "whatsapp:+14155238886")
+TWILIO_WHATSAPP_NUMBER = os.environ.get("TWILIO_WHATSAPP_NUMBER")
 TWILIO_PHONE_NUMBER = os.environ.get("TWILIO_PHONE_NUMBER")
 
 twilio_client = None
@@ -806,3 +806,4 @@ if __name__ == '__main__':
     port = int(os.environ.get("PORT", 10000))
     init_db()
     app.run(host="0.0.0.0", port=port)
+
